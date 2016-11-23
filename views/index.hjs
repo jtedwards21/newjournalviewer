@@ -8,7 +8,7 @@
 　　　　<link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
   </head>
   <body>
-    <div id="content">{{{markup}}}</div>
+    <div id="content" class="container">{{{markup}}}</div>
 
     <script src="javascripts/bundle.js"></script>
   </body>

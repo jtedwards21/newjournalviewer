@@ -25,16 +25,21 @@ export default class Search extends React.Component {
     };
   }
   render() {
+//Maybe there's a better way to render the bottom with bootstrap
     return (
-      <div className="search-component">
-        <input type="text" value={this.state.query} onChange={this.UpdateInputValue.bind(this)}/>
-        <a className="btn btn-default" onClick={this.Search.bind(this)}>Search</a>
+      <div className="row">
+	<div className="col-md-6 col-md-offset-3 input-group">
+          <span className="input-group-btn">
+	    <button className="btn btn-default"  onClick={this.Search.bind(this)} type="button">Go!</button>
+          </span>
+          <input className="form-control" type="text" value={this.state.query} onChange={this.UpdateInputValue.bind(this)}/>
+	</div>
         <div className="label-container">
-        <div>Image</div>
-        <div>Title</div>
-	<div>User</div>
-        <div>Start Date</div>
-        <div>Days Traveled</div>
+        <div className="col-md-2 col-md-offset-1">Image</div>
+        <div className="col-md-2">Title</div>
+	<div className="col-md-2">User</div>
+        <div className="col-md-2">Start Date</div>
+        <div className="col-md-2">Days Traveled</div>
         </div>
         <div>
 	   <Journals data={this.state.data} />
