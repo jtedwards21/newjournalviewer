@@ -29,6 +29,13 @@ export default class Search extends React.Component {
       <div className="search-component">
         <input type="text" value={this.state.query} onChange={this.UpdateInputValue.bind(this)}/>
         <a className="btn btn-default" onClick={this.Search.bind(this)}>Search</a>
+        <div className="label-container">
+        <div>Image</div>
+        <div>Title</div>
+	<div>User</div>
+        <div>Start Date</div>
+        <div>Days Traveled</div>
+        </div>
         <div>
 	   <Journals data={this.state.data} />
         </div>

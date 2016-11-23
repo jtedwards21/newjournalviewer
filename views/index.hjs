@@ -3,6 +3,9 @@
   <head>
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src='/jquery.js'></script>
+　　　　<script src='/bootstrap.min.js'></script>
+　　　　<link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
   </head>
   <body>
     <div id="content">{{{markup}}}</div>
