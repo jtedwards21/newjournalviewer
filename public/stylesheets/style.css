@@ -10,3 +10,12 @@ a {
 .results {
 margin-top: 20px;
 }
+
+.small-image {
+max-height: 100px;
+}
+
+.table-text {
+line-height: 100px;
+font-size: 1.7em;
+}

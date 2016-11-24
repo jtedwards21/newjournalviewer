@@ -2,14 +2,22 @@
 <html>
   <head>
     <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src='/jquery.js'></script>
 　　　　<script src='/bootstrap.min.js'></script>
 　　　　<link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
   </head>
   <body>
+    <div class="page-header">
+      <h1 class="text-center">Search For A Destination</h1>
+      <h1 class="text-center"><small>
+        <span class="glyphicon glyphicon-plane"　aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-globe"　aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-tree-conifer"　aria-hidden="true"></span>
+    </div>
     <div id="content" class="container">{{{markup}}}</div>
-
+    
+    <script src='/style.js'></script>
     <script src="javascripts/bundle.js"></script>
   </body>
 </html>

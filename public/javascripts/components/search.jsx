@@ -51,11 +51,11 @@ export default class Search extends React.Component {
         <table className="table table-hover results">
           <thead>
             <tr>
-	    <th>Image</th>
-            <th>Title</th>
-	    <th>User</th>
-            <th>Start Date</th>
-            <th>Days Traveled</th>
+	    <th　className="text-center" >Image</th>
+            <th　className="text-center" >Title</th>
+	    <th　className="text-center" >User</th>
+            <th　className="text-center" >Start Date</th>
+            <th　className="text-center" >Days Traveled</th>
 	    </tr>
           </thead>
 	    <Journals data={this.state.data} />
