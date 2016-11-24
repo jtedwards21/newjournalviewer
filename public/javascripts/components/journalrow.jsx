@@ -9,6 +9,7 @@ export default class JournalRow extends React.Component {
   }
   render() {
 　　  return <tr>
+    <td></td>
     <td>{this.props.data.title}</td>
     <td>{this.props.data.userName}</td>
     <td>{this.props.data.startTime}</td>

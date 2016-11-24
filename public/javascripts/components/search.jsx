@@ -42,16 +42,16 @@ export default class Search extends React.Component {
 //Maybe there's a better way to render the bottom with bootstrap
     return (
       <div className="row">
-	<div className="col-md-6 col-md-offset-3 input-group">
+	<div className="col-md-10 col-md-offset-1 input-group">
           <span className="input-group-btn">
 	    <button className="btn btn-default"  onClick={this.Search.bind(this)} type="button">Go!</button>
           </span>
           <input className="form-control" type="text" value={this.state.query} onChange={this.UpdateInputValue.bind(this)}/>
 	</div>
-        <table>
+        <table className="table table-hover results">
           <thead>
             <tr>
-            <th>Image</th>
+	    <th>Image</th>
             <th>Title</th>
 	    <th>User</th>
             <th>Start Date</th>
