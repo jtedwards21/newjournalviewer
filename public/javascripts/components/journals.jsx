@@ -1,4 +1,5 @@
 import React from "react";
+import JournalRow from './journalrow';
 
 export default class Journals extends React.Component {
   constructor() {
@@ -8,20 +9,14 @@ export default class Journals extends React.Component {
     };
   }
   render() {
-　　　 var d = [];
-    if(this.props.data.length !== 0){
-    d = this.props.data.data.data.books;
-    }
-    console.log(d)
-    return(
-    <div>
-     {
-        d.map(function(r){
-	return [
-        <a>{r.title}</a>
-        ]
-        })}
-    </div>
-    )
+    let rows = this.props.data.map(j => {
+	return <JournalRow data={j} />
+})
+    console.log(rows);
+   return <tbody>
+		{rows}
+	</tbody>
   }
 }
+
+

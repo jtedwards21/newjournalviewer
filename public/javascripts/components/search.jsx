@@ -15,7 +15,16 @@ export default class Search extends React.Component {
     console.log("search");
     var url = this.makeUrl(this.state.query)
     axios.get(url)
-    .then(data => this.setState({data}));
+    .then(data => this.ProcessData({data}));
+    //.then(data => this.setState({data}));
+  }
+  ProcessData(data){
+    var d = data.data.data.data;
+    console.log('processed')
+    console.log(d)
+    if(d.count > 0){
+	this.setState({data: d.books})
+    }
   }
   constructor() {
     super();
@@ -34,16 +43,18 @@ export default class Search extends React.Component {
           </span>
           <input className="form-control" type="text" value={this.state.query} onChange={this.UpdateInputValue.bind(this)}/>
 	</div>
-        <div className="label-container">
-        <div className="col-md-2 col-md-offset-1">Image</div>
-        <div className="col-md-2">Title</div>
-	<div className="col-md-2">User</div>
-        <div className="col-md-2">Start Date</div>
-        <div className="col-md-2">Days Traveled</div>
-        </div>
-        <div>
-	   <Journals data={this.state.data} />
-        </div>
+        <table>
+          <thead>
+            <tr>
+            <th>Image</th>
+            <th>Title</th>
+	    <th>User</th>
+            <th>Start Date</th>
+            <th>Days Traveled</th>
+	    </tr>
+          </thead>
+	    <Journals data={this.state.data} />
+        </table>
       </div>
     );
   } 
