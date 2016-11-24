@@ -10,8 +10,10 @@ export default class Journals extends React.Component {
   }
   render() {
     let rows = this.props.data.map(j => {
-	return <JournalRow data={j} />
+	console.log(j.id)
+	return <JournalRow key={j.id} data={j} />
 })
+　　　　console.log('getting rows');
     console.log(rows);
    return <tbody>
 		{rows}

@@ -19,11 +19,16 @@ export default class Search extends React.Component {
     //.then(data => this.setState({data}));
   }
   ProcessData(data){
-    var d = data.data.data.data;
+    var count = data.data.data.data.count;
+    var d = data.data.data.data.books;
     console.log('processed')
+　　　　d.map(function(book, i){
+	book.id=i
+	return book
+});
     console.log(d)
-    if(d.count > 0){
-	this.setState({data: d.books})
+    if(count > 0){
+	this.setState({data: d})
     }
   }
   constructor() {
